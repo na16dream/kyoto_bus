@@ -692,5 +692,27 @@ window.addEventListener('DOMContentLoaded',()=>{
   }
 });
 </script>
+  <!-- ODPT ガイドライン準拠：出典・免責・問い合わせ表示 -->
+<div id="odpt-notice" style="
+  position:fixed;bottom:0;left:0;right:0;z-index:300;
+  background:rgba(255,255,255,.93);backdrop-filter:blur(6px);
+  border-top:1px solid #e0e0e0;
+  font-size:10px;color:#777;line-height:1.6;
+  padding:5px 14px 5px;
+  display:flex;align-items:center;flex-wrap:wrap;gap:0 12px;
+">
+  <span>
+    📡 本アプリが利用する公共交通データは
+    <a href="https://ckan.odpt.org/dataset/kyoto_municipal_transportation_kyoto_city_bus_gtfs"
+       target="_blank" style="color:#c0392b">公共交通オープンデータセンター（ODPT）</a>
+    において提供されるものです（京都市交通局）。
+    必ずしも正確・完全ではありません。運行情報は事業者へ直接お問い合わせください。
+  </span>
+  <span style="white-space:nowrap">🗓 データ取得日：2026年4月24日</span>
+  <span style="white-space:nowrap">🗺 地図：© <a href="https://openstreetmap.org" target="_blank" style="color:#c0392b">OpenStreetMap</a> contributors</span>
+  <button onclick="document.getElementById('odpt-notice').style.display='none'"
+    style="margin-left:auto;background:none;border:none;cursor:pointer;color:#bbb;font-size:13px;padding:0 4px"
+    title="閉じる">✕</button>
+</div>
 </body>
 </html>
